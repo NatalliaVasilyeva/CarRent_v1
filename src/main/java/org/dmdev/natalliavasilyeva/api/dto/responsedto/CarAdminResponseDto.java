@@ -1,0 +1,24 @@
+package org.dmdev.natalliavasilyeva.api.dto.responsedto;
+
+
+import java.util.List;
+
+public class CarAdminResponseDto extends CarUserResponseDto {
+
+    private String number;
+    private String vin;
+    private boolean isRepaired;
+    private List<AccidentResponseDto> accidents;
+
+    private List<OrderResponseDto> orders;
+
+    public CarAdminResponseDto(String brand, ModelResponseDTO model, String color, String yearOfProduction, String number, String vin, boolean isRepaired, String image, int pricePerDay, List<AccidentResponseDto> accidents, List<OrderResponseDto> orders) {
+
+        super(brand, model, color, yearOfProduction, image, pricePerDay);
+        this.number = number;
+        this.vin = vin;
+        this.isRepaired = isRepaired;
+        this.accidents = accidents;
+        this.orders = orders;
+    }
+}
