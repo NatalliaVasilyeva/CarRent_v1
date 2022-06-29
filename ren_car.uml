@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.accident</OriginalElement>
+  <nodes>
+    <node x="655.0571511226582" y="117.49806877512816">f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.category</node>
+    <node x="253.903135042123" y="346.37326709702086">f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.order</node>
+    <node x="-142.26119084250388" y="174.25406238985295">f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.model</node>
+    <node x="126.35438810392377" y="-114.34622552837249">f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.car</node>
+    <node x="445.508364345164" y="125.85861382917014">f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.user</node>
+    <node x="-69.72506867041264" y="16.150172881441932">f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.brand</node>
+    <node x="595.2266932243101" y="-25.86569112082026">f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.price</node>
+    <node x="834.4948229931218" y="276.62686218408896">f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.userdetails</node>
+    <node x="850.5205971393882" y="89.27188165555756">f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.driver_license</node>
+    <node x="579.3759634167754" y="306.33538968885466">f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.accident</node>
+    <node x="203.4725096918625" y="166.21772345901223">f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.car_rental_time</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.car" target="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.model" relationship="REFERENCES">
+      <point x="-83.61557894642765" y="104.0" />
+      <point x="135.0" y="-82.0" />
+    </edge>
+    <edge source="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.model" target="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.category" relationship="REFERENCES">
+      <point x="67.53612217209124" y="-82.0" />
+      <point x="67.77493132958736" y="-131.84622552837249" />
+      <point x="733.7266932243101" y="-131.84622552837249" />
+      <point x="11.169542101651928" y="-49.0" />
+    </edge>
+    <edge source="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.category" target="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.price" relationship="REFERENCES">
+      <point x="-60.0" y="-49.0" />
+      <point x="6.8304578983480155" y="38.0" />
+    </edge>
+    <edge source="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.model" target="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.brand" relationship="REFERENCES">
+      <point x="-9.96387782790876" y="-82.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.car_rental_time" target="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.car" relationship="REFERENCES">
+      <point x="-75.61812158793875" y="-60.0" />
+      <point x="0.0" y="104.0" />
+    </edge>
+    <edge source="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.userdetails" target="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.user" relationship="REFERENCES">
+      <point x="1.770068781752343E-4" y="-114.99986218408897" />
+      <point x="928.495" y="246.0" />
+      <point x="637.557" y="246.0" />
+      <point x="637.557" y="185.859" />
+      <point x="73.99963565483597" y="3.8617082986114326E-4" />
+    </edge>
+    <edge source="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.accident" target="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.order" relationship="REFERENCES">
+      <point x="-79.5" y="0.0" />
+      <point x="128.50000000000003" y="-73.03787740816622" />
+    </edge>
+    <edge source="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.order" target="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.car_rental_time" relationship="REFERENCES">
+      <point x="-87.9306253502605" y="-104.0" />
+      <point x="0.0" y="60.0" />
+    </edge>
+    <edge source="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.order" target="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.user" relationship="REFERENCES">
+      <point x="128.499864957877" y="15.461732902979122" />
+      <point x="816.995" y="465.835" />
+      <point x="816.995" y="246.0" />
+      <point x="637.557" y="246.0" />
+      <point x="637.557" y="185.859" />
+      <point x="73.99963565483597" y="3.8617082986114326E-4" />
+    </edge>
+    <edge source="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.userdetails" target="f3eb2304-4d45-4844-bd54-e1cbbb413e22.TABLE:dmdev.car_rent.driver_license" relationship="REFERENCES">
+      <point x="32.02577414626637" y="-115.0" />
+      <point x="15.0" y="60.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.7549833887043189" showDependencies="false" x="459.0" y="221.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
