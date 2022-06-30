@@ -1,4 +1,4 @@
 package org.dmdev.natalliavasilyeva.domain.model;
 
-public interface ModelMarkInterface {
+public interface Identifiable {
 }

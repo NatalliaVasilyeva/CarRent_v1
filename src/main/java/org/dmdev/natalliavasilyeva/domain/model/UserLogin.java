@@ -2,7 +2,7 @@ package org.dmdev.natalliavasilyeva.domain.model;
 
 import java.util.Objects;
 
-public class UserLogin implements ModelMarkInterface {
+public class UserLogin implements Identifiable {
 
     private String email;
     private String password;

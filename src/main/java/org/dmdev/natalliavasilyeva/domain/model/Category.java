@@ -3,7 +3,7 @@ package org.dmdev.natalliavasilyeva.domain.model;
 
 import java.util.Objects;
 
-public class Category implements ModelMarkInterface {
+public class Category implements Identifiable {
 
     private long id;
     private String name;

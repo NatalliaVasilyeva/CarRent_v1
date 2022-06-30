@@ -4,7 +4,7 @@ package org.dmdev.natalliavasilyeva.domain.model;
 import java.util.List;
 import java.util.Objects;
 
-public class Brand implements ModelMarkInterface {
+public class Brand implements Identifiable {
     private String name;
     private List<Model> models;
 

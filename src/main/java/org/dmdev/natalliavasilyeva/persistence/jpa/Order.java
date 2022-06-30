@@ -8,7 +8,6 @@ import java.time.LocalDateTime;
 public class Order implements Entity, Serializable {
 
     private long id;
-
     private Instant date;
     private long carRentalTimeId;
     private long userId;

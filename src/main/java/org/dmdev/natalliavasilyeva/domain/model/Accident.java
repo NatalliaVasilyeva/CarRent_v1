@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.Objects;
 
-public class Accident implements ModelMarkInterface {
+public class Accident implements Identifiable {
 
     private long id;
     private Order order;

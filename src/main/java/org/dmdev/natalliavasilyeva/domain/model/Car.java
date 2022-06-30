@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class Car implements ModelMarkInterface {
+public class Car implements Identifiable {
     private long id;
     private Model model;
     private Color color;

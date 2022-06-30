@@ -3,10 +3,9 @@ package org.dmdev.natalliavasilyeva.domain.model;
 
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Order implements ModelMarkInterface{
+public class Order implements Identifiable {
 
     private long id;
     private Instant date;

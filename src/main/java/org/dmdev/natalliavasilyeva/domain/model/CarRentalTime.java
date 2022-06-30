@@ -1,10 +1,9 @@
 package org.dmdev.natalliavasilyeva.domain.model;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class CarRentalTime implements ModelMarkInterface{
+public class CarRentalTime implements Identifiable {
 
     private long id;
     private Car car;

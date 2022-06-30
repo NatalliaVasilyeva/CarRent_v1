@@ -1,10 +1,9 @@
 package org.dmdev.natalliavasilyeva.domain.model;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class DriverLicense implements ModelMarkInterface{
+public class DriverLicense implements Identifiable {
 
     private long id;
     private String number;

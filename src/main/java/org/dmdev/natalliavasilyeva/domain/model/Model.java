@@ -4,7 +4,7 @@ package org.dmdev.natalliavasilyeva.domain.model;
 import java.util.Collections;
 import java.util.Objects;
 
-public class Model implements ModelMarkInterface{
+public class Model implements Identifiable {
 
     private long id;
     private String name;

@@ -2,12 +2,11 @@ package org.dmdev.natalliavasilyeva.domain.model;
 
 
 import java.time.Instant;
-import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class User implements ModelMarkInterface{
+public class User implements Identifiable {
 
     private long id;
     private String email;

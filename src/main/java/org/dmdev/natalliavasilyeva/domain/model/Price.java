@@ -3,7 +3,7 @@ package org.dmdev.natalliavasilyeva.domain.model;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Price implements ModelMarkInterface{
+public class Price implements Identifiable {
 
     private long id;
     private BigDecimal sum;
