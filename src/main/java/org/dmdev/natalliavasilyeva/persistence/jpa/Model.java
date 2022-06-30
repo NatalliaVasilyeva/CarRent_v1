@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Model implements Entity, Serializable {
 
-    private int id;
+    private long id;
 
     private String name;
 
@@ -12,14 +12,14 @@ public class Model implements Entity, Serializable {
 
     private String engineType;
 
-    private int brandId;
+    private long brandId;
 
-    private int categoryId;
+    private long categoryId;
 
     public Model() {
     }
 
-    public Model(int id, String name, String transmission, String engineType, int brandId, int categoryId) {
+    public Model(long id, String name, String transmission, String engineType, long brandId, long categoryId) {
         this.id = id;
         this.name = name;
         this.transmission = transmission;
@@ -29,7 +29,7 @@ public class Model implements Entity, Serializable {
     }
 
     @Override
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -45,11 +45,11 @@ public class Model implements Entity, Serializable {
         return engineType;
     }
 
-    public int getBrandId() {
+    public long getBrandId() {
         return brandId;
     }
 
-    public int getCategoryId() {
+    public long getCategoryId() {
         return categoryId;
     }
 
@@ -58,7 +58,7 @@ public class Model implements Entity, Serializable {
     }
 
     public static final class Builder {
-        private int id;
+        private long id;
 
         private String name;
 
@@ -66,11 +66,11 @@ public class Model implements Entity, Serializable {
 
         private String engineType;
 
-        private int brandId;
+        private long brandId;
 
-        private int categoryId;
+        private long categoryId;
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
@@ -90,12 +90,12 @@ public class Model implements Entity, Serializable {
             return this;
         }
 
-        public Builder brand(int brandId) {
+        public Builder brand(long brandId) {
             this.brandId = brandId;
             return this;
         }
 
-        public Builder category(int categoryId) {
+        public Builder category(long categoryId) {
             this.categoryId = categoryId;
             return this;
         }

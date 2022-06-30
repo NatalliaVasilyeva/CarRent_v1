@@ -5,11 +5,11 @@ import java.time.LocalDateTime;
 
 public class OrderShotResponseDto {
 
-    private int id;
+    private long id;
     private LocalDateTime date;
     private String orderStatus;
 
-    public OrderShotResponseDto(int id, LocalDateTime date, String orderStatus) {
+    public OrderShotResponseDto(long id, LocalDateTime date, String orderStatus) {
         this.id = id;
         this.date = date;
         this.orderStatus = orderStatus;

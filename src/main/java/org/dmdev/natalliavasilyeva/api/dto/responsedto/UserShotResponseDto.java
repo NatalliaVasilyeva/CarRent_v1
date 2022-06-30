@@ -3,7 +3,7 @@ package org.dmdev.natalliavasilyeva.api.dto.responsedto;
 import java.time.LocalDate;
 
 public class UserShotResponseDto {
-    private int id;
+    private long id;
     private String email;
     private String name;
     private String surname;
@@ -12,7 +12,7 @@ public class UserShotResponseDto {
     private LocalDate birthday;
     private DriverLicenseDto driverLicenseDto;
 
-    public UserShotResponseDto(int id, String email, String name, String surname, String address, String phone, LocalDate birthday, DriverLicenseDto driverLicenseDto) {
+    public UserShotResponseDto(long id, String email, String name, String surname, String address, String phone, LocalDate birthday, DriverLicenseDto driverLicenseDto) {
         this.id = id;
         this.email = email;
         this.name = name;

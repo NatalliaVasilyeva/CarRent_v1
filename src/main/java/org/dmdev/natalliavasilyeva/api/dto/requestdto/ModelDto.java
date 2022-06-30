@@ -1,6 +1,6 @@
 package org.dmdev.natalliavasilyeva.api.dto.requestdto;
 
-public class ModelCreateDto {
+public class ModelDto {
 
     private String name;
     private String transmission;
@@ -8,7 +8,7 @@ public class ModelCreateDto {
     private String brand;
     private String category;
 
-    public ModelCreateDto(String name, String transmission, String engineType, String brand, String category) {
+    public ModelDto(String name, String transmission, String engineType, String brand, String category) {
         this.name = name;
         this.transmission = transmission;
         this.engineType = engineType;

@@ -1,24 +1,26 @@
 package org.dmdev.natalliavasilyeva.domain.model;
 
 
+import java.math.BigDecimal;
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Order {
+public class Order implements ModelMarkInterface{
 
-    private int id;
-    private LocalDateTime date;
+    private long id;
+    private Instant date;
     private CarRentalTime carRentalTime;
     private User user;
     private String passport;
     private boolean isInsuranceNeeded;
     private OrderStatus orderStatus;
-    private int sum;
+    private BigDecimal sum;
 
     public Order() {
     }
 
-    private Order(int id, LocalDateTime date, CarRentalTime carRentalTime, User user, String passport, boolean isInsuranceNeeded, OrderStatus orderStatus, int sum) {
+    private Order(long id, Instant date, CarRentalTime carRentalTime, User user, String passport, boolean isInsuranceNeeded, OrderStatus orderStatus, BigDecimal sum) {
         this.id = id;
         this.date = date;
         this.carRentalTime = carRentalTime;
@@ -29,7 +31,7 @@ public class Order {
         this.sum = sum;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -53,11 +55,11 @@ public class Order {
         return orderStatus;
     }
 
-    public int getSum() {
+    public BigDecimal getSum() {
         return sum;
     }
 
-    public LocalDateTime getDate() {
+    public Instant getDate() {
         return date;
     }
 
@@ -66,18 +68,19 @@ public class Order {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Order order = (Order) o;
-        return id == order.id && isInsuranceNeeded == order.isInsuranceNeeded && sum == order.sum && Objects.equals(carRentalTime, order.carRentalTime) && Objects.equals(user, order.user) && Objects.equals(passport, order.passport) && orderStatus == order.orderStatus;
+        return id == order.id && isInsuranceNeeded == order.isInsuranceNeeded && Objects.equals(date, order.date) && Objects.equals(carRentalTime, order.carRentalTime) && Objects.equals(user, order.user) && Objects.equals(passport, order.passport) && orderStatus == order.orderStatus && Objects.equals(sum, order.sum);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, carRentalTime, user, passport, isInsuranceNeeded, orderStatus, sum);
+        return Objects.hash(id, date, carRentalTime, user, passport, isInsuranceNeeded, orderStatus, sum);
     }
 
     @Override
     public String toString() {
         return "Order{" +
                 "id=" + id +
+                ", date=" + date +
                 ", carRentalTime=" + carRentalTime +
                 ", user=" + user +
                 ", passport='" + passport + '\'' +
@@ -88,27 +91,25 @@ public class Order {
     }
 
     public static final class Builder {
-        private int id;
-
-        private LocalDateTime date;
+        private long id;
+        private Instant date;
         private CarRentalTime carRentalTime;
         private User user;
-
         private String passport;
         private boolean isInsuranceNeeded;
         private OrderStatus orderStatus;
-        private int sum;
+        private BigDecimal sum;
 
         public Builder() {
-            this.date = LocalDateTime.now();
+            this.date = Instant.now();
         }
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
 
-        public Builder date(LocalDateTime date) {
+        public Builder date(Instant date) {
             this.date = date;
             return this;
         }
@@ -138,7 +139,7 @@ public class Order {
             return this;
         }
 
-        public Builder sum(int sum) {
+        public Builder sum(BigDecimal sum) {
             this.sum = sum;
             return this;
         }

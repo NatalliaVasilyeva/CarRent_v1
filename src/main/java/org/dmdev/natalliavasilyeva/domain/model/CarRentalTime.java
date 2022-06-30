@@ -1,26 +1,27 @@
 package org.dmdev.natalliavasilyeva.domain.model;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class CarRentalTime {
+public class CarRentalTime implements ModelMarkInterface{
 
-    private int id;
+    private long id;
     private Car car;
-    private LocalDateTime startRentalDate;
-    private LocalDateTime endRentalDate;
+    private Instant startRentalDate;
+    private Instant endRentalDate;
 
     public CarRentalTime() {
     }
 
-    private CarRentalTime(int id, Car car, LocalDateTime startRentalDate, LocalDateTime endRentalDate) {
+    private CarRentalTime(long id, Car car, Instant startRentalDate, Instant endRentalDate) {
         this.id = id;
         this.car = car;
         this.startRentalDate = startRentalDate;
         this.endRentalDate = endRentalDate;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -28,11 +29,11 @@ public class CarRentalTime {
         return car;
     }
 
-    public LocalDateTime getStartRentalDate() {
+    public Instant getStartRentalDate() {
         return startRentalDate;
     }
 
-    public LocalDateTime getEndRentalDate() {
+    public Instant getEndRentalDate() {
         return endRentalDate;
     }
 
@@ -61,12 +62,12 @@ public class CarRentalTime {
 
     public static final class Builder {
 
-        private int id;
+        private long id;
         private Car car;
-        private LocalDateTime startRentalDate;
-        private LocalDateTime endRentalDate;
+        private Instant startRentalDate;
+        private Instant endRentalDate;
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
@@ -76,12 +77,12 @@ public class CarRentalTime {
             return this;
         }
 
-        public Builder start(LocalDateTime startRentalDate) {
+        public Builder start(Instant startRentalDate) {
             this.startRentalDate = startRentalDate;
             return this;
         }
 
-        public Builder end(LocalDateTime endRentalDate) {
+        public Builder end(Instant endRentalDate) {
             this.endRentalDate = endRentalDate;
             return this;
         }

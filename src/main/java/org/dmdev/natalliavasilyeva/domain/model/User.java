@@ -1,14 +1,15 @@
 package org.dmdev.natalliavasilyeva.domain.model;
 
 
+import java.time.Instant;
 import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class User {
+public class User implements ModelMarkInterface{
 
-    private int id;
+    private long id;
     private String email;
     private String password;
     private String role;
@@ -16,14 +17,14 @@ public class User {
     private String surname;
     private String address;
     private String phone;
-    private LocalDate birthday;
+    private Instant birthday;
     private DriverLicense driverLicense;
     private List<Order> orders;
 
     public User() {
     }
 
-    private User(int id, String email, String password, String role, String name, String surname, String address, String phone, LocalDate birthday, DriverLicense driverLicense, List<Order> orders) {
+    private User(long id, String email, String password, String role, String name, String surname, String address, String phone, Instant birthday, DriverLicense driverLicense, List<Order> orders) {
         this.id = id;
         this.email = email;
         this.password = password;
@@ -37,7 +38,7 @@ public class User {
         this.orders = orders;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -69,7 +70,7 @@ public class User {
         return phone;
     }
 
-    public LocalDate getBirthday() {
+    public Instant getBirthday() {
         return birthday;
     }
 
@@ -112,7 +113,7 @@ public class User {
     }
 
     public static final class Builder {
-        private int id;
+        private long id;
         private String email;
 
         private String password;
@@ -121,7 +122,7 @@ public class User {
         private String surname;
         private String address;
         private String phone;
-        private LocalDate birthday;
+        private Instant birthday;
         private DriverLicense driverLicense;
         private List<Order> orders;
 
@@ -129,7 +130,7 @@ public class User {
             this.orders = Collections.emptyList();
         }
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
@@ -169,7 +170,7 @@ public class User {
             return this;
         }
 
-        public Builder birthday(LocalDate birthday) {
+        public Builder birthday(Instant birthday) {
             this.birthday = birthday;
             return this;
         }

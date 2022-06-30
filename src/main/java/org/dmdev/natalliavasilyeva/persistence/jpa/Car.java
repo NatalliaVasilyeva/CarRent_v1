@@ -3,8 +3,8 @@ package org.dmdev.natalliavasilyeva.persistence.jpa;
 import java.io.Serializable;
 
 public class Car implements Entity, Serializable {
-    private int id;
-    private int modelId;
+    private long id;
+    private long modelId;
     private String color;
     private String yearOfProduction;
     private String number;
@@ -17,8 +17,8 @@ public class Car implements Entity, Serializable {
     }
 
     private Car(
-            int id,
-            int modelId,
+            long id,
+            long modelId,
             String color,
             String yearOfProduction,
             String number,
@@ -36,11 +36,11 @@ public class Car implements Entity, Serializable {
     }
 
     @Override
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public int getModelId() {
+    public long getModelId() {
         return modelId;
     }
 
@@ -86,8 +86,8 @@ public class Car implements Entity, Serializable {
 
     public static final class Builder {
 
-        private int id;
-        private int modelId;
+        private long id;
+        private long modelId;
         private String color;
         private String yearOfProduction;
         private String number;
@@ -95,12 +95,12 @@ public class Car implements Entity, Serializable {
         private boolean isRepaired;
         private String image;
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
 
-        public Builder model(int modelId) {
+        public Builder model(long modelId) {
             this.modelId = modelId;
             return this;
         }

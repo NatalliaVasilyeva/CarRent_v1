@@ -1,24 +1,26 @@
 package org.dmdev.natalliavasilyeva.persistence.jpa;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.Instant;
 import java.time.LocalDateTime;
 
 public class Order implements Entity, Serializable {
 
-    private int id;
+    private long id;
 
-    private LocalDateTime date;
-    private int carRentalTimeId;
-    private int userId;
+    private Instant date;
+    private long carRentalTimeId;
+    private long userId;
     private String passport;
     private boolean isInsuranceNeeded;
     private String orderStatus;
-    private int sum;
+    private BigDecimal sum;
 
     public Order() {
     }
 
-    private Order(int id, LocalDateTime date, int carRentalTimeId, int userId, String passport, boolean isInsuranceNeeded, String orderStatus, int sum) {
+    private Order(long id, Instant date, long carRentalTimeId, long userId, String passport, boolean isInsuranceNeeded, String orderStatus, BigDecimal sum) {
         this.id = id;
         this.date = date;
         this.carRentalTimeId = carRentalTimeId;
@@ -29,15 +31,19 @@ public class Order implements Entity, Serializable {
         this.sum = sum;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public int getUserId() {
+    public Instant getDate() {
+        return date;
+    }
+
+    public long getUserId() {
         return userId;
     }
 
-    public int getCarRentalTimeId() {
+    public long getCarRentalTimeId() {
         return carRentalTimeId;
     }
 
@@ -69,45 +75,45 @@ public class Order implements Entity, Serializable {
         this.orderStatus = orderStatus;
     }
 
-    public int getSum() {
+    public BigDecimal getSum() {
         return sum;
     }
 
-    public void setSum(int sum) {
+    public void setSum(BigDecimal sum) {
         this.sum = sum;
     }
 
     public static final class Builder {
-        private int id;
+        private long id;
 
-        private LocalDateTime date;
-        private int carRentalTimeId;
-        private int userId;
+        private Instant date;
+        private long carRentalTimeId;
+        private long userId;
         private String passport;
         private boolean isInsuranceNeeded;
         private String orderStatus;
-        private int sum;
+        private BigDecimal sum;
 
         public Builder() {
-            this.date = LocalDateTime.now();
+            this.date = Instant.now();
         }
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
 
-        public Builder id(LocalDateTime date) {
+        public Builder id(Instant date) {
             this.date = date;
             return this;
         }
 
-        public Builder carRentalTime(int carRentalTimeId) {
+        public Builder carRentalTime(long carRentalTimeId) {
             this.carRentalTimeId = carRentalTimeId;
             return this;
         }
 
-        public Builder user(int userId) {
+        public Builder user(long userId) {
             this.userId = userId;
             return this;
         }
@@ -127,7 +133,7 @@ public class Order implements Entity, Serializable {
             return this;
         }
 
-        public Builder sum(int sum) {
+        public Builder sum(BigDecimal sum) {
             this.sum = sum;
             return this;
         }

@@ -1,5 +1,6 @@
 package org.dmdev.natalliavasilyeva.api.dto.responsedto;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class OrderResponseDto extends OrderShotResponseDto {
@@ -8,9 +9,9 @@ public class OrderResponseDto extends OrderShotResponseDto {
     private LocalDateTime startRentalDate;
     private LocalDateTime endRentalDate;
     private boolean isInsuranceNeeded;
-    private int sum;
+    private BigDecimal sum;
 
-    public OrderResponseDto(int id, LocalDateTime date, String orderStatus, String carDescription, LocalDateTime startRentalDate, LocalDateTime endRentalDate, boolean isInsuranceNeeded,  int sum) {
+    public OrderResponseDto(long id, LocalDateTime date, String orderStatus, String carDescription, LocalDateTime startRentalDate, LocalDateTime endRentalDate, boolean isInsuranceNeeded, BigDecimal sum) {
         super(id, date, orderStatus);
         this.carDescription = carDescription;
         this.startRentalDate = startRentalDate;

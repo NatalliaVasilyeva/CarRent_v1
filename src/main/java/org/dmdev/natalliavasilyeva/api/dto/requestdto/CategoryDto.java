@@ -4,9 +4,9 @@ public class CategoryDto {
 
     private String name;
 
-    private int priceId;
+    private long priceId;
 
-    public CategoryDto(String name, int priceId) {
+    public CategoryDto(String name, long priceId) {
         this.name = name;
         this.priceId = priceId;
     }
@@ -15,7 +15,7 @@ public class CategoryDto {
         return name;
     }
 
-    public int getPriceId() {
+    public long getPriceId() {
         return priceId;
     }
 }

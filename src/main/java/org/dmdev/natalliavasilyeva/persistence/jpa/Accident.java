@@ -1,20 +1,22 @@
 package org.dmdev.natalliavasilyeva.persistence.jpa;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.Instant;
 import java.time.LocalDateTime;
 
 public class Accident implements Entity, Serializable {
-    private int id;
-    private int orderId;
-    private LocalDateTime date;
+    private long id;
+    private long orderId;
+    private Instant date;
     private String description;
-    private double damage;
+    private BigDecimal damage;
 
 
     public Accident() {
     }
 
-    private Accident(int id, int orderId, LocalDateTime date, String description, double damage) {
+    private Accident(long id, long orderId, Instant date, String description, BigDecimal damage) {
         this.id = id;
         this.orderId = orderId;
         this.date = date;
@@ -23,15 +25,15 @@ public class Accident implements Entity, Serializable {
     }
 
     @Override
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public int getOrderId() {
+    public long getOrderId() {
         return orderId;
     }
 
-    public LocalDateTime getDate() {
+    public Instant getDate() {
         return date;
     }
 
@@ -43,29 +45,29 @@ public class Accident implements Entity, Serializable {
         this.description = description;
     }
 
-    public double getDamage() {
+    public BigDecimal getDamage() {
         return damage;
     }
 
     public static final class Builder {
 
-        private int id;
-        private int orderId;
-        private LocalDateTime date;
+        private long id;
+        private long orderId;
+        private Instant date;
         private String description;
-        private int damage;
+        private BigDecimal damage;
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
 
-        public Builder order(int orderId) {
+        public Builder order(long orderId) {
             this.orderId = orderId;
             return this;
         }
 
-        public Builder date(LocalDateTime date) {
+        public Builder date(Instant date) {
             this.date = date;
             return this;
         }
@@ -75,7 +77,7 @@ public class Accident implements Entity, Serializable {
             return this;
         }
 
-        public Builder damage(int damage) {
+        public Builder damage(BigDecimal damage) {
             this.damage = damage;
             return this;
         }

@@ -1,6 +1,7 @@
 package org.dmdev.natalliavasilyeva.api.dto.responsedto;
 
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class AccidentResponseDto {
@@ -10,9 +11,9 @@ public class AccidentResponseDto {
     private String carNumber;
     private String userName;
     private String description;
-    private double damage;
+    private BigDecimal damage;
 
-    public AccidentResponseDto(LocalDateTime date, String carDescription, String carNumber, String userName, String description, double damage) {
+    public AccidentResponseDto(LocalDateTime date, String carDescription, String carNumber, String userName, String description, BigDecimal damage) {
         this.date = date;
         this.carDescription = carDescription;
         this.carNumber = carNumber;

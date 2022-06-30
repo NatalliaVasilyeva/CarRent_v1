@@ -1,23 +1,24 @@
 package org.dmdev.natalliavasilyeva.persistence.jpa;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.time.LocalDate;
 
 public class UserDetails implements Entity, Serializable {
 
-    private int id;
+    private long id;
     private String name;
     private String surname;
     private String address;
     private String phone;
-    private LocalDate birthday;
-    private int userId;
-    private int driverLicenseId;
+    private Instant birthday;
+    private long userId;
+    private long driverLicenseId;
 
     public UserDetails() {
     }
 
-    private UserDetails(int id, String name, String surname, String address, String phone, LocalDate birthday, int userId, int driverLicenseId) {
+    private UserDetails(long id, String name, String surname, String address, String phone, Instant birthday, long userId, long driverLicenseId) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -29,7 +30,7 @@ public class UserDetails implements Entity, Serializable {
     }
 
     @Override
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -65,11 +66,11 @@ public class UserDetails implements Entity, Serializable {
         this.phone = phone;
     }
 
-    public LocalDate getBirthday() {
+    public Instant getBirthday() {
         return birthday;
     }
 
-    public int getUser() {
+    public long getUser() {
         return userId;
     }
 
@@ -77,7 +78,7 @@ public class UserDetails implements Entity, Serializable {
         this.userId = userId;
     }
 
-    public int getDriverLicense() {
+    public long getDriverLicense() {
         return driverLicenseId;
     }
 
@@ -86,16 +87,16 @@ public class UserDetails implements Entity, Serializable {
     }
 
     public static final class Builder {
-        private int id;
+        private long id;
         private String name;
         private String surname;
         private String address;
         private String phone;
-        private LocalDate birthday;
-        private int userId;
-        private int driverLicenseId;
+        private Instant birthday;
+        private long userId;
+        private long driverLicenseId;
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
@@ -120,17 +121,17 @@ public class UserDetails implements Entity, Serializable {
             return this;
         }
 
-        public Builder birthday(LocalDate birthday) {
+        public Builder birthday(Instant birthday) {
             this.birthday = birthday;
             return this;
         }
 
-        public Builder user(int userId) {
+        public Builder user(long userId) {
             this.userId = userId;
             return this;
         }
 
-        public Builder driverLicense(int driverLicenseId) {
+        public Builder driverLicense(long driverLicenseId) {
             this.driverLicenseId = driverLicenseId;
             return this;
         }

@@ -4,8 +4,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class Car {
-    private int id;
+public class Car implements ModelMarkInterface {
+    private long id;
     private Model model;
     private Color color;
     private String yearOfProduction;
@@ -22,7 +22,7 @@ public class Car {
     }
 
     private Car(
-            int id,
+            long id,
             Model model,
             Color color,
             String yearOfProduction,
@@ -44,7 +44,7 @@ public class Car {
         this.orders = orders;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -115,7 +115,7 @@ public class Car {
 
     public static final class Builder {
 
-        private int id;
+        private long id;
         private Model model;
         private Color color;
         private String yearOfProduction;
@@ -134,7 +134,7 @@ public class Car {
             this.isRepaired = false;
         }
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }

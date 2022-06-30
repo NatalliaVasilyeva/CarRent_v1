@@ -3,23 +3,21 @@ package org.dmdev.natalliavasilyeva.api.dto.requestdto;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class UserRegistrationDto {
+public class UserDto {
     private String email;
     private String password;
-    private String role;
     private String name;
     private String surname;
     private String address;
     private String phone;
     private LocalDate birthday;
-    private int driverLicenseNumber;
+    private String driverLicenseNumber;
     private LocalDateTime driverLicenseIssueDate;
     private LocalDateTime driverLicenseExpiredDate;
 
-    public UserRegistrationDto(String email, String password, String role, String name, String surname, String address, String phone, LocalDate birthday, int driverLicenseNumber, LocalDateTime driverLicenseIssueDate, LocalDateTime driverLicenseExpiredDate) {
+    public UserDto(String email, String password, String name, String surname, String address, String phone, LocalDate birthday, String driverLicenseNumber, LocalDateTime driverLicenseIssueDate, LocalDateTime driverLicenseExpiredDate) {
         this.email = email;
         this.password = password;
-        this.role = role;
         this.name = name;
         this.surname = surname;
         this.address = address;
@@ -36,10 +34,6 @@ public class UserRegistrationDto {
 
     public String getPassword() {
         return password;
-    }
-
-    public String getRole() {
-        return role;
     }
 
     public String getName() {
@@ -62,7 +56,7 @@ public class UserRegistrationDto {
         return birthday;
     }
 
-    public int getDriverLicenseNumber() {
+    public String getDriverLicenseNumber() {
         return driverLicenseNumber;
     }
 

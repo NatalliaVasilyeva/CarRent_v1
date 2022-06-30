@@ -1,7 +1,7 @@
 package org.dmdev.natalliavasilyeva.api.dto.responsedto;
 
 public class ErrorResponseDto {
-        private String message;
+    private String message;
 
     public ErrorResponseDto(String message) {
         this.message = message;

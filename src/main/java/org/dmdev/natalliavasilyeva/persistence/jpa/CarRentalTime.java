@@ -1,19 +1,20 @@
 package org.dmdev.natalliavasilyeva.persistence.jpa;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.time.LocalDateTime;
 
 public class CarRentalTime implements Entity, Serializable {
 
-    private int id;
-    private int carId;
-    private LocalDateTime startRentalDate;
-    private LocalDateTime endRentalDate;
+    private long id;
+    private long carId;
+    private Instant startRentalDate;
+    private Instant endRentalDate;
 
     public CarRentalTime() {
     }
 
-    private CarRentalTime(int id, int carId, LocalDateTime startRentalDate, LocalDateTime endRentalDate) {
+    private CarRentalTime(long id, long carId, Instant startRentalDate, Instant endRentalDate) {
         this.id = id;
         this.carId = carId;
         this.startRentalDate = startRentalDate;
@@ -21,45 +22,45 @@ public class CarRentalTime implements Entity, Serializable {
     }
 
     @Override
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public int getCarId() {
+    public long getCarId() {
         return carId;
     }
 
-    public LocalDateTime getStartRentalDate() {
+    public Instant getStartRentalDate() {
         return startRentalDate;
     }
 
-    public LocalDateTime getEndRentalDate() {
+    public Instant getEndRentalDate() {
         return endRentalDate;
     }
 
     public static final class Builder {
 
-        private int id;
-        private int carId;
-        private LocalDateTime startRentalDate;
-        private LocalDateTime endRentalDate;
+        private long id;
+        private long carId;
+        private Instant startRentalDate;
+        private Instant endRentalDate;
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
 
-        public Builder car(int carId) {
+        public Builder car(long carId) {
             this.carId = carId;
             return this;
         }
 
-        public Builder start(LocalDateTime startRentalDate) {
+        public Builder start(Instant startRentalDate) {
             this.startRentalDate = startRentalDate;
             return this;
         }
 
-        public Builder end(LocalDateTime endRentalDate) {
+        public Builder end(Instant endRentalDate) {
             this.endRentalDate = endRentalDate;
             return this;
         }

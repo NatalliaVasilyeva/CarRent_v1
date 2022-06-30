@@ -1,25 +1,26 @@
 package org.dmdev.natalliavasilyeva.domain.model;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Price {
+public class Price implements ModelMarkInterface{
 
-    private int id;
-    private int sum;
+    private long id;
+    private BigDecimal sum;
 
     public Price() {
     }
 
-    private Price(int id, int sum) {
+    private Price(long id, BigDecimal sum) {
         this.id = id;
         this.sum = sum;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public int getSum() {
+    public BigDecimal getSum() {
         return sum;
     }
 
@@ -28,7 +29,7 @@ public class Price {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Price price = (Price) o;
-        return id == price.id && sum == price.sum;
+        return id == price.id && Objects.equals(sum, price.sum);
     }
 
     @Override
@@ -46,16 +47,16 @@ public class Price {
 
     public static final class Builder {
 
-        private int id;
-        private int sum;
+        private long id;
+        private BigDecimal sum;
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
 
 
-        public Builder sum(int sum) {
+        public Builder sum(BigDecimal sum) {
             this.sum = sum;
             return this;
         }

@@ -6,15 +6,15 @@ public class OrderCreateDto {
 
     private final static String DEFAULT_ORDER_STATUS = "CONFIRMATION_WAIT";
 
-    private int carId;
+    private long carId;
     private LocalDateTime startRentalDate;
     private LocalDateTime endRentalDate;
-    private int userId;
+    private long userId;
     private String passport;
     private boolean isInsuranceNeeded;
     private String orderStatus;
 
-    public OrderCreateDto(int carId, LocalDateTime startRentalDate, LocalDateTime endRentalDate, int userId, String passport, boolean isInsuranceNeeded) {
+    public OrderCreateDto(long carId, LocalDateTime startRentalDate, LocalDateTime endRentalDate, long userId, String passport, boolean isInsuranceNeeded) {
         this.carId = carId;
         this.startRentalDate = startRentalDate;
         this.endRentalDate = endRentalDate;
@@ -24,7 +24,7 @@ public class OrderCreateDto {
         this.orderStatus = DEFAULT_ORDER_STATUS;
     }
 
-    public int getCarId() {
+    public long getCarId() {
         return carId;
     }
 
@@ -36,7 +36,7 @@ public class OrderCreateDto {
         return endRentalDate;
     }
 
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 

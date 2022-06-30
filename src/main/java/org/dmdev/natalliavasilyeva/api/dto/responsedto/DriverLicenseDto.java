@@ -4,11 +4,11 @@ import java.time.LocalDateTime;
 
 public class DriverLicenseDto {
 
-    private int driverLicenseNumber;
+    private String driverLicenseNumber;
     private LocalDateTime driverLicenseIssueDate;
     private LocalDateTime driverLicenseExpiredDate;
 
-    public DriverLicenseDto(int driverLicenseNumber, LocalDateTime driverLicenseIssueDate, LocalDateTime driverLicenseExpiredDate) {
+    public DriverLicenseDto(String driverLicenseNumber, LocalDateTime driverLicenseIssueDate, LocalDateTime driverLicenseExpiredDate) {
         this.driverLicenseNumber = driverLicenseNumber;
         this.driverLicenseIssueDate = driverLicenseIssueDate;
         this.driverLicenseExpiredDate = driverLicenseExpiredDate;

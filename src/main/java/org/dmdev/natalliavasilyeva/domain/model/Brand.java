@@ -4,17 +4,14 @@ package org.dmdev.natalliavasilyeva.domain.model;
 import java.util.List;
 import java.util.Objects;
 
-public class Brand {
+public class Brand implements ModelMarkInterface {
     private String name;
     private List<Model> models;
 
     public Brand() {
     }
 
-    private Brand(String name, List<Model> models) {
-        this.name = name;
-        this.models = models;
-    }
+
 
     public String getName() {
         return name;

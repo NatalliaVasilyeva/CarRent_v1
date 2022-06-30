@@ -3,7 +3,7 @@ package org.dmdev.natalliavasilyeva.persistence.jpa;
 import java.io.Serializable;
 
 public class User implements Entity, Serializable {
-    private int id;
+    private long id;
     private String email;
     private String password;
     private String role;
@@ -11,14 +11,14 @@ public class User implements Entity, Serializable {
     public User() {
     }
 
-    private User(int id, String email, String password, String role) {
+    private User(long id, String email, String password, String role) {
         this.id = id;
         this.email = email;
         this.password = password;
         this.role = role;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -45,7 +45,7 @@ public class User implements Entity, Serializable {
     public static final class Builder {
 
         private final String DEFAULT_USER_ROLE = "CLIENT";
-        private int id;
+        private long id;
         private String email;
         private String password;
         private String role;
@@ -54,7 +54,7 @@ public class User implements Entity, Serializable {
             this.role = DEFAULT_USER_ROLE;
         }
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }

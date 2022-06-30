@@ -1,14 +1,16 @@
 package org.dmdev.natalliavasilyeva.api.dto.requestdto;
 
+import java.math.BigDecimal;
+
 public class PriceDto {
 
-    private int sum;
+    private BigDecimal sum;
 
-    public PriceDto(int sum) {
+    public PriceDto(BigDecimal sum) {
         this.sum = sum;
     }
 
-    public int getSum() {
+    public BigDecimal getSum() {
         return sum;
     }
 }

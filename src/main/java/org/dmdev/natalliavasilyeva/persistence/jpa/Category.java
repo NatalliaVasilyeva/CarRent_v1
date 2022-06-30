@@ -2,21 +2,21 @@ package org.dmdev.natalliavasilyeva.persistence.jpa;
 
 public class Category implements Entity {
 
-    private int id;
+    private long id;
     private String name;
-    private int priceId;
+    private long priceId;
 
     public Category() {
     }
 
-    private Category(int id, String name, int priceId) {
+    private Category(long id, String name, long priceId) {
         this.id = id;
         this.name = name;
         this.priceId = priceId;
     }
 
     @Override
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -24,18 +24,18 @@ public class Category implements Entity {
         return name;
     }
 
-    public int getPriceId() {
+    public long getPriceId() {
         return priceId;
     }
 
     public static final class Builder {
 
-        private int id;
+        private long id;
         private String name;
 
-        private int priceId;
+        private long priceId;
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
@@ -45,7 +45,7 @@ public class Category implements Entity {
             return this;
         }
 
-        public Builder price(int priceId) {
+        public Builder price(long priceId) {
             this.priceId = priceId;
             return this;
         }

@@ -1,20 +1,21 @@
 package org.dmdev.natalliavasilyeva.domain.model;
 
-import java.time.LocalDateTime;
+import java.math.BigDecimal;
+import java.time.Instant;
 import java.util.Objects;
 
-public class Accident {
+public class Accident implements ModelMarkInterface {
 
-    private int id;
+    private long id;
     private Order order;
-    private LocalDateTime date;
+    private Instant date;
     private String description;
-    private double damage;
+    private BigDecimal damage;
 
     public Accident() {
     }
 
-    private Accident(int id, Order order, LocalDateTime date, String description, double damage) {
+    private Accident(long id, Order order, Instant date, String description, BigDecimal damage) {
         this.id = id;
         this.order = order;
         this.date = date;
@@ -22,7 +23,7 @@ public class Accident {
         this.damage = damage;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -30,7 +31,7 @@ public class Accident {
         return order;
     }
 
-    public LocalDateTime getDate() {
+    public Instant getDate() {
         return date;
     }
 
@@ -38,7 +39,7 @@ public class Accident {
         return description;
     }
 
-    public double getDamage() {
+    public BigDecimal getDamage() {
         return damage;
     }
 
@@ -47,7 +48,7 @@ public class Accident {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Accident accident = (Accident) o;
-        return id == accident.id && Double.compare(accident.damage, damage) == 0 && Objects.equals(order, accident.order) && Objects.equals(date, accident.date) && Objects.equals(description, accident.description);
+        return id == accident.id && Objects.equals(order, accident.order) && Objects.equals(date, accident.date) && Objects.equals(description, accident.description) && Objects.equals(damage, accident.damage);
     }
 
     @Override
@@ -68,13 +69,13 @@ public class Accident {
 
     public static final class Builder {
 
-        private int id;
+        private long id;
         private Order order;
-        private LocalDateTime date;
+        private Instant date;
         private String description;
-        private int damage;
+        private BigDecimal damage;
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
@@ -84,17 +85,17 @@ public class Accident {
             return this;
         }
 
-        public Builder date(LocalDateTime date) {
+        public Builder date(Instant date) {
             this.date = date;
             return this;
         }
 
-        public Builder year(String description) {
+        public Builder description(String description) {
             this.description = description;
             return this;
         }
 
-        public Builder damage(int damage) {
+        public Builder damage(BigDecimal damage) {
             this.damage = damage;
             return this;
         }

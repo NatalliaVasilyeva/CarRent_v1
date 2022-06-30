@@ -1,19 +1,20 @@
 package org.dmdev.natalliavasilyeva.persistence.jpa;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.time.LocalDateTime;
 
 public class DriverLicense implements Entity, Serializable {
 
-    private int id;
-    private int number;
-    private LocalDateTime issueDate;
-    private LocalDateTime expiredDate;
+    private long id;
+    private String number;
+    private Instant issueDate;
+    private Instant expiredDate;
 
     public DriverLicense() {
     }
 
-    private DriverLicense(int id, int number, LocalDateTime issueDate, LocalDateTime expiredDate) {
+    private DriverLicense(long id, String number, Instant issueDate, Instant expiredDate) {
         this.id = id;
         this.number = number;
         this.issueDate = issueDate;
@@ -21,57 +22,57 @@ public class DriverLicense implements Entity, Serializable {
     }
 
     @Override
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
-    public LocalDateTime getIssueDate() {
+    public Instant getIssueDate() {
         return issueDate;
     }
 
-    public void setIssueDate(LocalDateTime issueDate) {
+    public void setIssueDate(Instant issueDate) {
         this.issueDate = issueDate;
     }
 
-    public LocalDateTime getExpiredDate() {
+    public Instant getExpiredDate() {
         return expiredDate;
     }
 
-    public void setExpiredDate(LocalDateTime expiredDate) {
+    public void setExpiredDate(Instant expiredDate) {
         this.expiredDate = expiredDate;
     }
 
     public static final class Builder {
 
-        private int id;
-        private int number;
-        private LocalDateTime issueDate;
-        private LocalDateTime expiredDate;
+        private long id;
+        private String number;
+        private Instant issueDate;
+        private Instant expiredDate;
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
 
-        public Builder number(int number) {
+        public Builder number(String number) {
             this.number = number;
             return this;
         }
 
-        public Builder issueDate(LocalDateTime issueDate) {
+        public Builder issueDate(Instant issueDate) {
             this.issueDate = issueDate;
             return this;
         }
 
-        public Builder expiredDate(LocalDateTime expiredDate) {
+        public Builder expiredDate(Instant expiredDate) {
             this.expiredDate = expiredDate;
             return this;
         }

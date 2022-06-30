@@ -3,22 +3,22 @@ package org.dmdev.natalliavasilyeva.domain.model;
 
 import java.util.Objects;
 
-public class Category {
+public class Category implements ModelMarkInterface {
 
-    private int id;
+    private long id;
     private String name;
     private Price price;
 
     public Category() {
     }
 
-    private Category(int id, String name, Price price) {
+    private Category(long id, String name, Price price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -54,12 +54,12 @@ public class Category {
 
     public static final class Builder {
 
-        private int id;
+        private long id;
         private String name;
 
         private Price price;
 
-        public Builder id(int id) {
+        public Builder id(long id) {
             this.id = id;
             return this;
         }
